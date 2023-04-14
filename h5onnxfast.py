@@ -1,3 +1,11 @@
+#########################################
+#             H5 ONNX FAST              #
+# Convert H5 model to ONNX model        #
+# with nchw/nhwc & batch1/batchN option #
+#         Author: bluelul.com           #
+#           Date: 14/04/2023            #
+#########################################
+
 import tensorflow as tf
 from tensorflow import keras
 
