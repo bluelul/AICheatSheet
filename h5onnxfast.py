@@ -46,7 +46,7 @@ config = model.get_config()
 input_config = config["layers"][0]["config"]
 
 spec = (tf.TensorSpec(input_config['batch_input_shape'], tf.float32, name=input_config['name']),)
-output_path = model.name + "_batchN.onnx"
+output_path = model_name + "_batchN.onnx"
 
 inputs_as_nchw = None
 if (is_NCHW): inputs_as_nchw=[input_config['name']+':0']
@@ -65,5 +65,5 @@ if (is_batch1):
 
 	fix_output_shapes(model_onnx) # update the output shapes to make them fixed if possible.
 
-	onnx.save(model_onnx, model.name + '_batch1.onnx')
+	onnx.save(model_onnx, model_name + '_batch1.onnx')
 
