@@ -3,16 +3,10 @@
 # Convert H5 model to ONNX model        #
 # with nchw/nhwc & batch1/batchN option #
 #         Author: bluelul.com           #
-#           Date: 14/04/2023            #
+#           Date: 25/04/2023            #
 #########################################
 
-import tensorflow as tf
-from tensorflow import keras
-
-import tf2onnx
-import onnx
-from onnxruntime.tools.onnx_model_utils import make_dim_param_fixed, fix_output_shapes
-
+####################### IMPORT ARGPARSE
 import argparse
 
 ####################### CONFIG
@@ -36,6 +30,14 @@ model_file = args.model_file
 is_NCHW = args.nchw
 is_batch1 = args.batch1
 opset = args.opset
+
+####################### IMPORT CORE
+import tensorflow as tf
+from tensorflow import keras
+
+import tf2onnx
+import onnx
+from onnxruntime.tools.onnx_model_utils import make_dim_param_fixed, fix_output_shapes
 
 ####################### LOAD MODEL
 model = keras.models.load_model(model_file)
