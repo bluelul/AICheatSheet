@@ -1,4 +1,5 @@
 # AI Cheat Sheet
+Tools to make AI development faster and simpler
 
 ### Author: `bluelul.com`
 
