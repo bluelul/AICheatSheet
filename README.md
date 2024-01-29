@@ -106,3 +106,15 @@ baidu_crawler = BaiduImageCrawler(storage={'root_dir': 'your_image_dir'})
 baidu_crawler.crawl(keyword='cat', offset=0, max_num=1000,
                     min_size=(200,200), max_size=None)
 ```
+
+<br>
+
+## YOLO infer
+- Install YOLO
+```bash
+pip install ultralytics
+```
+- Detect objects and crop results to another folder inside `execute_path/yolo/` folder
+```bash
+yolo detect predict model=yolov8x.pt save_crop project='yolo' source='input_folder_or_file'
+```
