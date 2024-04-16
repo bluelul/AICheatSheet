@@ -118,3 +118,16 @@ pip install ultralytics
 ```bash
 yolo detect predict model=yolov8x.pt save_crop project='yolo' source='input_folder_or_file'
 ```
+
+<br>
+
+## Distinct integer ID numbers by BGR color
+```python
+def get_color(number):
+    """ Converts an integer number to a color """
+    blue = int(number*50 % 256)
+    green = int(number*30 % 256)
+    red = int(number*103 % 256)
+
+    return blue, green, red
+```
