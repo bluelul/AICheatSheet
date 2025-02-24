@@ -131,3 +131,6 @@ def get_color(number):
 
     return blue, green, red
 ```
+
+## Vocal Remover and Isolation
+[https://vocalremover.org/](https://vocalremover.org/)
