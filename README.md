@@ -132,5 +132,13 @@ def get_color(number):
     return blue, green, red
 ```
 
+## LLM Benchmark
+### [MT-Bench](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge#how-to-plot-the-radar-figure)
+- Multi-turn open-ended questions
+- Radar plot
+- Bench field: Writing, Roleplay, Reasoning, Math, Coding, Extraction, STEM, Humanities
+
+<br>
+
 ## Vocal Remover and Isolation
 [https://vocalremover.org/](https://vocalremover.org/)
