@@ -142,3 +142,18 @@ def get_color(number):
 
 ## Vocal Remover and Isolation
 [https://vocalremover.org/](https://vocalremover.org/)
+
+<br>
+
+## ONNX FLOPs counting
+
+```bash
+pip install onnx-tool
+```
+
+```python
+import onnx_tool
+modelpath = 'resnet50.onnx'
+onnx_tool.model_profile(modelpath, None, None)
+```
+The final MACs total count is actually the FLOPs count
